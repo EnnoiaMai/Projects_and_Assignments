@@ -1,0 +1,225 @@
+/*
+Nguyen, Thuc
+jadrn041
+Project #1
+Fall 2017
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: auto;
+    background-image: url("montreal_skyline.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    background-attachment: fixed;
+    font-family: Arial, 'Times New Roman', Georgia, Verdana, Helvetica;
+    font-size: 100%;
+}
+
+/* HOME */
+#home_body {
+    height: 100%;
+    background-image: url("home_montreal_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#home_background_filter {
+    width: 100vw;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 80%, rgba(4, 40, 40, 0));
+    position: absolute;
+    bottom: 0;
+}
+#home_title {
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 4px 4px 6px black;
+    text-align: center;
+    font-size: 600%;
+}
+
+/* MENU */
+.transparent_menu {
+    width: 100%;
+    min-width: 1000px;
+    height: 8vh;
+    background-color: rgba(235, 235, 237, 0.9);
+    box-shadow: 0px 1px 1px 1px black;
+}
+.absolute_position {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+ul#menu {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+ul#menu li {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 15px;
+}
+ul#menu li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    vertical-align: middle;
+    padding: 1vh 10px 1vh 10px;
+}
+ul#menu li a:hover {
+    color: grey;
+    text-decoration: underline;
+}
+
+/* GENERAL LAYOUT */
+.center_text {
+    text-align: center;
+}
+h1 {
+    font-family: 'Niconne', cursive,'Palatino', Arial, 'Times New Roman', Georgia, Verdana, Helvetica;
+    font-size: 400%;
+    padding: 40px;
+    margin-top: 3px;
+    margin-bottom: 0px;
+}
+.header_content {
+    margin-bottom: 6vh;
+}
+.header_content p {
+    width: 50vw;
+    background-color: rgba(255, 250, 235, 1);
+    font-size: 110%;
+    padding: 4vh 4vw 4vh 4vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container {
+    width: 100vw;
+    height: auto;
+    display: inline-block;
+    border-top: 2px solid black;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+.container h3 {
+    color: #325361;
+    font-style: italic;
+    font-size: 150%;
+    text-align: center;
+    text-shadow: 1px 1px 1px grey;
+    margin-bottom: 2vh;
+}
+.container p {
+    font-size: 110%;
+}
+
+/* (1) Text on left, image on right
+   (2) Image on left, text on right
+*/
+.text_section_1 {
+    width: 40%;
+    float: left;
+    background-color: rgba(216, 225, 230, 1);
+    padding: 2vw;
+    margin-left: 4vw;
+}
+.text_section_2 {
+    width: 40%;
+    float: right;
+    background-color: rgba(216, 225, 230, 1);
+    padding: 2vw;
+    margin-right: 4vw;
+}
+.img_section_1 {
+    width: 560px;
+    max-width: 46%;
+    display: inline-block;
+    float: right;
+    margin-right: 2vw;
+}
+.img_section_1 img {
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+}
+.img_section_2 {
+    width: 560px;
+    max-width: 46%;
+    display: inline-block;
+    float: left;
+    margin-left: 2vw;
+}
+.img_section_2 img {
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+/* HISTORY */
+#history_header {
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
+#history_center_content {
+    width: 50vw;
+    background-color: rgba(254, 248, 236, 0.96);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+#history_center_content p {
+    text-indent: 40px;
+    line-height: 150%;
+    font-size: 110%;
+}
+#history_bg {
+    display: block;
+    max-width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 3vh;
+}
+
+/* NEIGHBORHOODS, ART AND ARCHITECTURE, MUST SEE SITES, FOOD AND RESTAURANTS */
+.center_content {
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* TABLE */
+#table_content {
+    padding-bottom: 6vh;
+}
+#table {
+    background-color: rgba(232, 236, 240, 0.9);
+    margin-left: auto;
+    margin-right: auto;
+}
+#table, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 16px;
+}
+th {
+    font-size: 120%;
+}
+td img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.yelp_link {
+    max-width: 100px;
+}
+.website_link {
+    max-width: 60px;
+}
