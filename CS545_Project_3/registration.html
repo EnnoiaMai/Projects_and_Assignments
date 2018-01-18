@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!--
+Nguyen, Thuc
+jadrn041
+Project #3
+Fall 2017
+-->
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Registration for SDSU Winter Marathon</title>
+    <link rel="stylesheet" href="registration_css.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="http://jadran.sdsu.edu/jquery/jquery.js"></script>
+    <script src="registration_jquery.js"></script>
+</head>
+
+<body id="registration_body">
+    <div id="registration_menu">
+        <div id="inner_menu">
+            <div>
+                <img id="back_button" src="back_button.png" alt="">
+            </div>
+            <h1>Registration</h1>
+        </div>
+    </div>
+
+    <div id="registration_div">
+
+        <form action="proj3_process_request.php" method="post" name="registrationForm" enctype="multipart/form-data" autocomplete="on">
+
+            <!-- Runner's Image -->
+            <div id="runners_div">
+                <div id="upload_div">
+                    <label for="upload_image">Upload a picture (.jpeg, .png .bmp) of yourself.</label>
+                    <input type="file" id="upload_image" name="uploadImage" value="Upload" accept="image/*" autofocus>
+                    <div id="error_image_div">
+                        <p>Select an image file to upload.</p>
+                    </div>
+                </div>
+                <div id="image_div">
+                    <img id="image_container" src=""/>
+                </div>
+            </div>
+
+            <!-- IDENTIFICATION -->
+            <div class="flex_block">
+                <div class="flex_column_container">
+                    <label for="first_name_text_box">First Name</label>
+                    <input type="text" size="24" id="first_name_text_box" name="firstName" maxlength="40">
+                </div>
+
+                <div class="flex_column_container">
+                    <label for="middle_name_text_box">Middle Name</label>
+                    <input type="text" size="24" id="middle_name_text_box" name="middleName" maxlength="30">
+                </div>
+
+                <div class="flex_column_container">
+                    <label for="last_name_text_box">Last Name</label>
+                    <input type="text" size="24" id="last_name_text_box" name="lastName" maxlength="40">
+                </div>
+            </div>
+            <div id="error_names_div">
+                <p>Input fields for first and last name cannot be empty.</p>
+            </div>
+
+            <!-- ADDRESS -->
+            <div class="address_div">
+                <label for="address_text_box">Address</label>
+                <input type="text" id="address_text_box" name="address" maxlength="40">
+            </div>
+
+            <div class="flex_block">
+                <div class="flex_column_container">
+                    <label for="city_text_box">City</label>
+                    <input type="text" id="city_text_box" name="city" maxlength="20">
+                </div>
+
+                <div class="flex_column_container">
+                    <label for="state_drop_down">State</label>
+                    <div id="drop_down_container">
+                        <select class="" id="state_drop_down" name="stateDropDown">
+                            <option value="null" selected>---</option>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="flex_column_container">
+                    <label for="zip_code_text_box">Zip Code:</label>
+                    <input type="text" id="zip_code_text_box" placeholder="#####" name="zipCode" maxlength="5">
+                </div>
+            </div>
+            <div id="error_address_div">
+                <p>A state must be selected. The zip code must contain a five-digit value. Input fields cannot be empty.</p>
+            </div>
+
+            <div class="flex_block">
+                <!-- PHONE NUMBER -->
+                <div class="flex_column_container">
+                    <label for="phone_area">Primary Phone Number</label>
+                    <div class="">
+                        <input type="text" size="5" placeholder="(xxx)" maxlength="3" name="phoneArea" id="phone_area">
+                        <input type="text" size="3" placeholder="xxx" maxlength="3" name="phone3">
+                        <input type="text" size="4" placeholder="xxxx" maxlength="4" name="phone4">
+                    </div>
+                </div>
+
+                <!-- EMAIL ADDRESS -->
+                <div class="flex_column_container">
+                    <label for="email_text_box">Email Address</label>
+                    <input type="text" id="email_text_box" name="email">
+                </div>
+            </div>
+            <div class="flex_block">
+                <div class="flex_column_container_error" id="error_phone_div">
+                    <p>Enter a valid phone number. Phone numbers may not contain letters or special characters. Input field cannot be empty.</p>
+                </div>
+                <div class="flex_column_container_error" id="error_email_div">
+                    <p>Email must contain the local-part, the @ symbol, and a valid domain. Input field cannot be empty.</p>
+                </div>
+            </div>
+
+            <div class="flex_block">
+                <!-- DATE OF BIRTH -->
+                <div class="flex_column_container">
+                    <label for="date_of_birth_text_box">Date of Birth</label>
+                    <input type="text" id="date_of_birth_text_box" placeholder="mm/dd/yyyy" name="dateOfBirth" maxlength="10">
+                </div>
+
+                <!-- GENDER -->
+                <div class="flex_column_container">
+                    <label>Gender</label>
+                    <div class="gender_row">
+                        <div class="gender_row_container">
+                            <input type="radio" id="gender_radio_male" name="genderRadio" value="male">
+                            <label for="gender_radio_male">Male</label>
+                        </div>
+
+                        <div class="gender_row_container">
+                            <input type="radio" id="gender_radio_female" name="genderRadio" value="female">
+                            <label for="gender_radio_female">Female</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="flex_block">
+                <div class="flex_column_container_error" id="error_dob_div">
+                    <p>Provide a valid date. Add the '/' separator after entering the month and day. Input field cannot be empty.</p>
+                </div>
+                <div class="flex_column_container_error" id="error_gender_div">
+                    <p>Select your gender.</p>
+                </div>
+            </div>
+
+            <!-- MEDICAL CONDITIONS-->
+            <div class="title_block">
+                <label for="medical_text_area">Medical Conditions</label>
+            </div>
+            <textarea id="medical_text_area" name="medicalTextArea" rows="8" maxlength="800"></textarea>
+
+            <!-- EXPERIENCE LEVEL -->
+            <div class="title_block">
+                <label>Experience Level</label>
+            </div>
+            <div class="flex_block_row">
+                <div class="flex_row_container">
+                    <input type="radio" id="exp_radio_novice" name="expRadio" value="novice">
+                    <label for="exp_radio_novice">Novice</label>
+                </div>
+                <div class="flex_row_container">
+                    <input type="radio" id="exp_radio_experienced" name="expRadio" value="experienced">
+                    <label for="exp_radio_experienced">Experienced</label>
+                </div>
+                <div class="flex_row_container">
+                    <input type="radio" id="exp_radio_expert" name="expRadio" value="expert">
+                    <label for="exp_radio_expert">Expert</label>
+                </div>
+            </div>
+            <div id="error_exp_div">
+                <p>Select your experience level.</p>
+            </div>
+
+            <!-- AGE CATEGORY -->
+            <div class="title_block">
+                <label>Age Category</label>
+            </div>
+            <div class="flex_block_row">
+                <div class="flex_row_container">
+                    <input type="radio" id="age_radio_teen" name="ageRadio" value="teen">
+                    <label for="age_radio_teen">Teen</label>
+                </div>
+                <div class="flex_row_container">
+                    <input type="radio" id="age_radio_adult" name="ageRadio" value="adult">
+                    <label for="age_radio_adult">Adult</label>
+                </div>
+                <div class="flex_row_container">
+                    <input type="radio" id="age_radio_senior" name="ageRadio" value="senior">
+                    <label for="age_radio_senior">Senior</label>
+                </div>
+            </div>
+            <div id="error_age_div">
+                <p>Select your age category.</p>
+            </div>
+
+            <!-- Duplicate error and busywait indicator (AJAX) -->
+            <div id="duplicate_error_div">
+                <p>ERROR: The information you provided appears to be a duplicate and already exists.</p>
+            </div>
+            <div id="busywait">
+                <div>
+                    <img src="ajax_loader_green_64.gif" alt="busywait icon">
+                    <p>Processing...</p>
+                </div>
+            </div>
+
+            <!-- Reset and Submit Button -->
+            <div class="flex_block">
+                <div id="button_containers_reset">
+                    <input type="reset" id="reset_button" value="Clear">
+                </div>
+                <div id="button_containers_submit">
+                    <input type="submit" id="submit_button" value="Submit">
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

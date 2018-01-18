@@ -1,0 +1,227 @@
+/*
+Nguyen, Thuc
+jadrn041
+Project #3
+Fall 2017
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+p, li {
+    font-size: 110%;
+    line-height: 140%;
+}
+body {
+    min-width: 800px;
+    font-family: "Times New Roman", Arial, Helvetica;
+}
+
+/*=================== REGISTRATION MENU ====================*/
+#registration_menu {
+    width: 100%;
+    height: 40%;
+    color: white;
+    background-color: #9EBDFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+#inner_menu {
+    width: 60%;
+    padding: 16px;
+}
+#inner_menu div {
+    float: left;
+}
+#inner_menu div img {
+    width: 26%;
+    max-width: 256px;
+}
+#inner_menu h1 {
+    padding: 16px;
+}
+#registration_body {
+    background-color: #D7E8F4;
+}
+#registration_div {
+    width: 60%;
+    background-color: #FFFEFE;
+    padding: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+label {
+    color: rgba(19, 139, 131, 1);
+}
+input, input:valid, #drop_down_container {
+    padding: 10px;
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 2px 0px  #c9c9c9 inset;
+}
+input:invalid {
+    border-color: red;
+}
+
+/*====================== RUNNERS IMAGE =======================*/
+#upload_div {
+    width: 40%;
+    box-sizing: border-box;
+    padding: 4px 16px;
+}
+
+/*===== IDENTIFICATION, ADDRESS, CONTACT, DOB AND GENDER =====*/
+.flex_block {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.flex_column_container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4px 16px;
+}
+.flex_column_container_error {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+}
+.gender_row {
+    display: flex;
+    flex-direction: row;
+}
+.gender_row_container {
+    display: flex;
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 2px 0px  #c9c9c9 inset;
+}
+.gender_row_container label {
+    padding-left: 8px;
+}
+
+/*======================== ADDRESS ===========================*/
+.address_div {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4px 16px;
+}
+.address_div label {
+    display: block;
+    padding-right: 8px;
+}
+.address_div input {
+    width: 80%;
+}
+#drop_down_container select {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+/*======== MEDICAL CONDTIONS, EXP LEVEL, AGE CATEGORY ========*/
+.title_block {
+    text-align: center;
+    padding: 6px;
+}
+.title_block label {
+    border-bottom: 1px solid #c9c9c9;
+}
+textarea {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4vh;
+}
+.flex_block_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1vh;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.flex_row_container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding: 8px 16px;
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 2px 0px  #c9c9c9 inset;
+}
+.flex_row_container label {
+    padding-left: 8px;
+}
+
+/*==================== RESET/SUBMIT ===========================*/
+#button_containers_reset {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px;
+}
+#button_containers_submit {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    padding: 16px;
+}
+#reset_button {
+    background-color: rgba(42, 42, 42, 1);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+#reset_button:hover {
+    background-color: rgba(155, 44, 12, 1);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+#submit_button {
+    background-color: rgba(42, 42, 42, 1);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+#submit_button:hover {
+    background-color: rgba(19, 139, 131, 1);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+/*========================= ERRORS ===========================*/
+#error_names_div, #error_address_div, #error_phone_div, #error_email_div, #error_dob_div, #error_gender_div, #error_exp_div, #error_age_div, #error_image_div {
+    color: red;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 6px;
+    font-size: 80%;
+}
+#file_description {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 6px;
+    font-size: 80%;
+    font-weight: bold;
+}

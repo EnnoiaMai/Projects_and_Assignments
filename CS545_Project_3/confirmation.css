@@ -1,0 +1,96 @@
+/*
+Nguyen, Thuc
+jadrn041
+Project #3
+Fall 2017
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    min-width: 700px;
+    background-color: rgba(62, 62, 62, 1);
+}
+
+#confirmation_body {
+    width: 60%;
+    background-color: white;
+    margin-top: 36px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#confirmation_body h2 {
+    color: white;
+    background-color: rgba(58, 189, 93, 1);
+    padding: 24px;
+    line-height: 140%;
+}
+#user_info_div {
+    padding-bottom: 16px;
+}
+#user_info_div p {
+    padding-top: 16px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#user_info_container {
+    display: flex;
+    box-sizing: border-box;
+    padding: 24px 12px 24px 12px;
+}
+
+#image_container {
+    width: 40%;
+    margin-right: 16px;
+}
+#image_container img {
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 6px;
+    border-bottom: 1px solid rgba(94, 101, 104, 1);
+}
+td:nth-child(1) {
+    color: rgba(133, 129, 129, 1);
+    width: 40%;
+}
+
+.flex_block {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#link_home {
+    background-color: rgba(42, 42, 42, 1);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+#link_home:hover {
+    background-color: rgba(232, 70, 60, 1);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}

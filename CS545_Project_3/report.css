@@ -1,0 +1,227 @@
+/*
+Nguyen, Thuc
+jadrn041
+Project #3
+Fall 2017
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+p, li {
+    font-size: 110%;
+    line-height: 140%;
+}
+body {
+    min-width: 860px;
+    font-family: "Times New Roman", Arial, Helvetica;
+}
+
+/*============================= MENU ===============================*/
+
+#report_menu {
+    width: 100%;
+    color: white;
+    background-color: rgba(19, 139, 131, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+#report_menu h1 {
+    padding: 16px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+#back_button_div {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 16px;
+    left: 24px;
+}
+#back_button_div img {
+    width: 100%;
+    max-width: 256px;
+}
+
+/*============================ LOGIN =============================*/
+
+#login_div {
+    width: 40%;
+    background-color: rgba(170, 170, 170, 1);
+    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#login_div h2 {
+    text-align: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+#login_div p {
+    color: red;
+    text-align: center;
+    font-size: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.flex_column_container {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.flex_column_container input:valid {
+    display: block;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 2px 0px  #c9c9c9 inset;
+}
+.flex_column_container input:invalid {
+    border-color: red;
+}
+
+.flex_block {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#button_containers_reset {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px;
+}
+#button_containers_submit {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    padding: 16px;
+}
+#reset_button {
+    background-color: rgba(42, 42, 42, 1);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+#reset_button:hover {
+    background-color: rgba(155, 44, 12, 1);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+#submit_button {
+    background-color: rgba(42, 42, 42, 1);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+#submit_button:hover {
+    background-color: rgba(19, 139, 131, 1);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+/*============================= REPORT =============================*/
+
+#report_body {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+th, td {
+    text-align: center;
+}
+th {
+    font-size: 160%;
+    padding: 32px 16px 16px 16px;
+    border-bottom: 1px solid rgba(157, 168, 173, 1);
+}
+td {
+    padding: 12px;
+    border: 1px solid rgba(157, 168, 173, 1);
+}
+
+table td:first-child {
+    width: 20%;
+}
+
+table img {
+    max-width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*============================= REPORT ERROR =============================*/
+
+#sign_in_error_div {
+    width: 50%;
+    background-color: rgba(255, 239, 197, 1);
+    padding: 24px;
+    margin-top: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid red;
+}
+#sign_in_error_div h1 {
+    color: red;
+    padding: 16px;
+}
+#sign_in_error_div p {
+    color: red;
+    font-weight: bold;
+    padding: 8px;
+}
+#sign_in_error_div a {
+    background-color: rgba(42, 42, 42, 1);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+#sign_in_error_div a:hover {
+    background-color: rgba(155, 44, 12, 1);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+#sign_in_error_div div {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+}
