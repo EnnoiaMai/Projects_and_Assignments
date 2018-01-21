@@ -5,6 +5,16 @@ Follow this [link](http://jadran.sdsu.edu/~jadrn041/proj3/index.html) to view th
 
 Here are previews of what the website looks like using gifs.
 
- ![CS545_Project2_3_](../images_readme/CS545_Project2_3_.gif)
+Validation that occurs in PHP on the server, in the case that JS is disabled.
 
- ![CS545_Project2_3_](../images_readme/CS545_Project2_3_.gif)
+ ![CS545_Project2_3_php_validation_preview](../images_readme/CS545_Project2_3_php_validation_preview.gif)
+
+
+If there was an error in uploading the runner's image, this page would be outputted.
+
+ ![CS545_Project2_3_duplicate_preview](../images_readme/CS545_Project2_3_duplicate_preview.png)
+
+
+ Preview of how logging in successfully will generate the Roster Report.
+
+![CS545_Project2_3_report_preview](../images_readme/CS545_Project2_3_report_preview.gif)

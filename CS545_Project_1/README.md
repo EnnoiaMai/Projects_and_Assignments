@@ -7,4 +7,5 @@ Here is a preview of what the website looks like.
 
 ![CS545_Project1_home](../images_readme/CS545_Project1_home.png)
 
+
 ![CS545_Project1_must_see_sites](../images_readme/CS545_Project1_must_see_sites.png)

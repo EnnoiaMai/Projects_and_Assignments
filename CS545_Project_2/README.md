@@ -7,4 +7,5 @@ Here are previews of what the website looks like using gifs.
 
  ![CS545_Project2_3_home](../images_readme/CS545_Project2_3_home_preview.gif)
 
+
  ![CS545_Project2_3_form](../images_readme/CS545_Project2_3_form_preview.gif)
