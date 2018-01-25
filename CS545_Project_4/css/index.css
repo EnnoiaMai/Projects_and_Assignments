@@ -1,0 +1,87 @@
+/*
+Nguyen, Thuc
+jadrn041
+Project #4
+Fall 2017
+*/
+
+/*================================= GENERAL ==================================*/
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    min-width: 920px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*------------------------- Content w/ Background-----------------------------*/
+#content {
+    background-image: url("../images/chocolate_vector.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    flex: 1 0 auto;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*---------------------------- Title Container -------------------------------*/
+#content > div:first-child {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding-top: 56px;
+    padding-bottom: 56px;
+}
+#content > div:first-child img {
+    display: block;
+    width: 70%;
+    max-width: 2000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*----------------------------- Trending Title -------------------------------*/
+#content h2 {
+    color: #fff;
+    background-color: #333;
+    text-align: center;
+    padding: 24px;
+}
+
+/*----------------------- Trending Products Continer -------------------------*/
+#flex_row {
+    font-size: 90%;
+    background-color: rgba(244, 232, 214, 0.96);
+    display: flex;
+    direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 16px;
+    box-sizing: border-box;
+}
+#flex_row > div {
+    flex-basis: 24%;
+    display: flex;
+    flex-direction: column;
+}
+#flex_row > div img {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+}
+#flex_row div h3 {
+    text-align: center;
+    min-height: 24px;
+    height: 24px;
+    overflow: auto;
+    padding: 10px;
+}
+#flex_row div p {
+    min-height: 50px;
+    height: 50px;
+    overflow: auto;
+    padding: 12px;
+}

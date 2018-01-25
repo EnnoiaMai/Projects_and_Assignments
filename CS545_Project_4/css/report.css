@@ -1,0 +1,73 @@
+/*
+Nguyen, Thuc
+jadrn041
+Project #4
+Fall 2017
+*/
+
+/*============================== MAIN CONTAINER ==============================*/
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    min-width: 920px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#content {
+    font-size: 90%;
+    flex: 1 0 auto;
+    width: 80%;
+    padding: 16px 48px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+#content h2 {
+    text-align: center;
+    color: #FFF;
+    background-color: #000;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+/*============================ SALES REPORT TABLE ============================*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*------------------------------ First Row -----------------------------------*/
+table tr:first-child {
+    background-color: #fffcf0;
+    border: 1px solid #EEE;
+    border-bottom: 1px solid #333;
+}
+table tr:first-child th {
+    padding: 24px;
+}
+table tr {
+    border-bottom: 1px solid #DDD;
+}
+/*------------------------------- Last Row -----------------------------------*/
+table tr:last-child {
+    border-bottom: none;
+}
+table tr:last-child th {
+    padding: 16px;
+}
+table tr:last-child th:first-child {
+    text-align: right;
+}
+/*------------------------------ Every Row -----------------------------------*/
+table td {
+    text-align: center;
+    padding: 16px;
+}

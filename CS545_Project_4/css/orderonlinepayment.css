@@ -1,0 +1,196 @@
+/*
+Nguyen, Thuc
+jadrn041
+Project #4
+Fall 2017
+*/
+
+/*================================= GENERAL ==================================*/
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    min-width: 920px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+input {
+    box-sizing: border-box;
+}
+input[type='text'] {
+    padding: 8px;
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 2px 0px #c9c9c9 inset;
+}
+
+#content {
+    font-size: 90%;
+    flex: 1 0 auto;
+    width: 90%;
+    background-color: #FFF;
+    box-sizing: border-box;
+    padding: 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content form > div {
+    display: flex;
+    flex-direction: row;
+}
+#content h2 {
+    text-align: center;
+    color: #FFF;
+    background-color: #000;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+/*====================== ADDRESS AND PAYMENT SECTION =========================*/
+#address_section {
+    width: 50%;
+    border-right: 1px solid #EEE;
+}
+#payment_section {
+    width: 50%;
+    padding: 16px;
+}
+
+/*===================== ADDRESS - BILLING AND SHIPPING =======================*/
+#billing_address_div, #shipping_address_div {
+    padding: 16px;
+}
+#billing_address_div h3, #shipping_address_div h3 {
+    padding: 8px;
+}
+/* Checkbox for shipping same as billing */
+#shipping_checkbox_div {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 24px;
+}
+#shipping_checkbox_div input {
+    margin-right: 16px;
+}
+#shipping_address_div {
+    display: none;
+    margin-top: 48px;
+}
+
+/*============================== INPUT FIELDS ================================*/
+.name_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+    flex-wrap: wrap;
+}
+.name_div div {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.address_div {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+.subaddress_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+    flex-wrap: wrap;
+}
+.subaddress_div div {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.phone_number_div {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+/*======================== PAYMENT AND EXPIRATION ============================*/
+#payment_type_div h3, #expiration_div h4 {
+    padding: 8px 0px;
+}
+#payment_type_div {
+    padding: 8px;
+}
+
+#cards_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 8px;
+    border: 1px solid #fff;
+}
+#credit_card_div {
+    padding: 8px;
+    margin-top: 12px;
+}
+#credit_card_div > div {
+    display: flex;
+    flex-direction: column;
+}
+#credit_card_div div:nth-child(2){
+    margin-top: 8px;
+}
+#expiration_div {
+    padding: 8px;
+    margin-bottom: 32px;
+}
+#expiration_div > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#expiration_div > div div {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+#checkout_div input {
+    color: #000;
+    background-color: orange;
+    display: block;
+    text-decoration: none;
+    border: none;
+    padding: 14px 64px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+#checkout_div input:hover {
+    color: white;
+    background-color: #333;
+    cursor: pointer;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+/*=============================== ERROR DIVS =================================*/
+#error_bill_names_div, #error_bill_address_div, #error_bill_phone_div, #error_ship_names_div, #error_ship_address_div, #error_ship_phone_div {
+    color: red;
+    padding: 0px 8px;
+    margin-bottom: 16px;
+    visibility: hidden;
+}
+#error_payment_type_div, #error_card_name_div, #error_card_number_div, #error_expiration_div {
+    color: red;
+    padding: 4px 0px;
+    margin-bottom: 0px;
+    visibility: hidden;
+}
+#error_card_name_div {
+    margin-bottom: 24px;
+}

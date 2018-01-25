@@ -1,0 +1,61 @@
+/*
+Nguyen, Thuc
+jadrn041
+Project #4
+Fall 2017
+*/
+
+/*================================= GENERAL ==================================*/
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    min-width: 920px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*================================= CONTENT ==================================*/
+#content {
+    flex: 1 0 auto;
+    width: 80%;
+    line-height: 140%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content h2 {
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    padding: 16px;
+    margin: 16px 48px 0px 48px;
+}
+
+/*------------------------------- Subtitle -----------------------------------*/
+#content h3 {
+    text-align: center;
+    padding: 24px;
+}
+
+/*------------------------------ Flourishes ----------------------------------*/
+#content img {
+    display: block;
+    width: 90%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content img:nth-child(2) {
+    margin-top: 16px;
+}
+#content img:nth-child(9) {
+    margin-bottom: 16px;
+}
+
+/*------------------------------- Paragraph ----------------------------------*/
+#content p {
+    color: #555;
+    padding: 12px 48px;
+}

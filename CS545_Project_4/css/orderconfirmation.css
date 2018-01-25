@@ -1,0 +1,194 @@
+/*
+Nguyen, Thuc
+jadrn041
+Project #4
+Fall 2017
+*/
+
+/*================================= GENERAL ==================================*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    min-width: 920px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#content {
+    font-size: 90%;
+    flex: 1 0 auto;
+    width: 90%;
+    padding: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+#content > h2 {
+    text-align: center;
+    color: #FFF;
+    background-color: #000;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+#content > p {
+    padding: 4px 0px;
+}
+
+/*============================ OUTER CONTAINERS ==============================*/
+#content > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#content > div > div:first-child {
+    width: 60%;
+}
+#order_summary {
+    width: 32%;
+    padding: 16px;
+    border: 1px solid #DDD;
+}
+#order_summary h3 {
+    text-align: center;
+}
+
+/*================================ DELIVERY ==================================*/
+#delivery_div {
+    padding: 16px;
+}
+#delivery_div > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 1px solid #DDD;
+}
+#delivery_div div div {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+#delivery_div div div h4 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+#delivery_div > div:nth-child(2) {
+    margin-top: 24px;
+}
+
+/*============================= CHECKOUT TABLE ===============================*/
+#checkout_table_div {
+    margin-top: 24px;
+}
+#checkout_table_div table {
+    width: 100%;
+    border-collapse: collapse;
+}
+#checkout_table_div th {
+    padding: 10px;
+    border-top: 2px solid #555;
+    border-bottom: 1px solid #DDD;
+}
+#checkout_table_div td {
+    border-bottom: 1px solid #DDD;
+}
+/*------------------------------ The Product ---------------------------------*/
+#checkout_table_div td:nth-child(1) {
+    width: 30%;
+}
+/*----------------------------- Product Image --------------------------------*/
+#checkout_table_div td img {
+    width: 100%;
+    max-width: 400px;
+}
+/*------------------------------ Description ---------------------------------*/
+#checkout_table_div td:nth-child(2) {
+    width: 40%;
+    vertical-align: top;
+    padding: 14px 6px;
+}
+
+/*-------------------------------- Quantity-----------------------------------*/
+#checkout_table_div td:nth-child(3) {
+    width: 15%;
+    text-align: center;
+    vertical-align: top;
+    padding: 14px 8px;
+}
+/*--------------------------------- Price ------------------------------------*/
+#checkout_table_div td:nth-child(4) {
+    width: 15%;
+    text-align: center;
+    vertical-align: top;
+    padding-top: 14px;
+}
+
+/*============================== ORDER SUMMARY ===============================*/
+#order_summary h3 {
+    border-bottom: 1px solid #333;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+#order_summary table {
+    width: 100%;
+    padding: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+}
+#order_summary td {
+    padding: 4px 16px;
+}
+#order_summary td:first-child {
+    width: 50%;
+}
+#order_summary td:nth-child(2) {
+    text-align: right;
+}
+#order_summary tr:nth-child(4) td {
+    font-size: 108%;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #555;
+}
+#order_summary input {
+    color: #000;
+    background-color: orange;
+    display: block;
+    text-decoration: none;
+    border: none;
+    padding: 12px 48px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+#order_summary input:hover {
+    color: #fff;
+    background-color: #333;
+    cursor: pointer;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+/*------------------------------ Custom Alert --------------------------------*/
+#success_div {
+    color: green;
+    font-weight: bold;
+    font-size: 100%;
+    margin-top: 6px;
+    visibility: hidden;
+}

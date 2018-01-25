@@ -1,0 +1,36 @@
+/*
+Nguyen, Thuc
+jadrn041
+Project #4
+Fall 2017
+*/
+
+/*============================== MAIN CONTAINER ==============================*/
+#footer {
+    background-color: #000;
+    flex-shrink: 0;
+    padding: 16px;
+}
+
+/*----------------------------- Links Container ------------------------------*/
+#links_container ul {
+    list-style: none;
+}
+#links_container ul li {
+    display: inline-block;
+}
+#links_container ul li a {
+    color: #FFF;
+    display: block;
+    padding: 8px 16px 8px 16px;
+}
+#links_container ul li a:hover {
+    color: #666;
+}
+
+/*----------------------------- Copyright Line -------------------------------*/
+#footer p {
+    color: #FFF;
+    text-align: center;
+    padding: 8px 0px 8px 0px;
+}

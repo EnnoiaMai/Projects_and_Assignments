@@ -1,0 +1,74 @@
+/*
+Nguyen, Thuc
+jadrn041
+Project #4
+Fall 2017
+*/
+
+/*============================== MAIN CONTAINER ==============================*/
+#menu {
+    background-color: #542a0c;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 12px;
+}
+
+/*------------------------------ Menu Title ----------------------------------*/
+#menu_icon {
+    color: #FFF;
+    flex: 1 0 32%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*------------------------------ Menu Links ----------------------------------*/
+#menu_links {
+    flex: 1 1 68%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#menu_links ul {
+    list-style: none;
+    text-align: center;
+}
+#menu_links ul li {
+    display: inline-block;
+}
+#menu_links ul li a {
+    color: #FFF;
+    display: block;
+    text-decoration: none;
+    padding: 20px 18px;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+#menu_links ul li a:hover {
+    color: #cc8f32;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+/*------------------------------- Menu Cart ----------------------------------*/
+#menu_cart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+#menu_cart img:hover, #menu_cart a:hover {
+    cursor: pointer;
+}
+#menu_cart a {
+    color: #FF4;
+    font-size: 110%;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    padding-right: 8px;
+    padding-left: 8px;
+}

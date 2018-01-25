@@ -1,0 +1,97 @@
+/*
+Nguyen, Thuc
+jadrn041
+Project #4
+Fall 2017
+*/
+
+/*================================ GENERAL ===================================*/
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    min-width: 920px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*================================ CONTENT ===================================*/
+#content {
+    flex: 1 0 auto;
+    width: 80%;
+    line-height: 140%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content h2 {
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    padding: 16px;
+    margin: 16px 48px 0px 48px;
+}
+
+/*------------------------------- Paragraph ----------------------------------*/
+#content > p:nth-child(2) {
+    padding: 12px 48px;
+}
+
+/*---------------------------- Contact Container -----------------------------*/
+#flex_row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0px 24px;
+}
+
+/*------------------------------ Detail Column -------------------------------*/
+#flex_row > div {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+}
+#flex_row > div h3 {
+    text-align: center;
+    text-decoration: underline solid #333;
+    -webkit-text-decoration: underline solid #333;
+    padding: 12px;
+}
+#flex_row div p {
+    color: #555;
+    text-align: center;
+}
+
+/*----------------------------- Icon Container -------------------------------*/
+.icon_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.icon_div > div {
+    display: block;
+    width: 10%;
+    max-width: 100px;
+}
+.icon_div > div img {
+    display: block;
+    width: 100%;
+}
+.icon_div p {
+    display: inline-block;
+    padding: 0px 6px;
+}
+
+/*---------------------------------- Map -------------------------------------*/
+#map_div {
+    margin-top: 36px;
+    margin-bottom: 36px;
+}
+#map_div iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
