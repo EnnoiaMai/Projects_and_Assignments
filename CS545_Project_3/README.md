@@ -1,4 +1,4 @@
-# CS545 - Project 3
+# CS545 - Project 3 - Marathon (Server-side)
 Details about this project are explained on my website. Please visit my [Portfolio](https://ennoiamai.github.io/Portfolio/web_applications/proj2_3/details3.html)
 
 <!-- Follow this [link](http://jadran.sdsu.edu/~jadrn041/proj3/index.html) to view the project. -->

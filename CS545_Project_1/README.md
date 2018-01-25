@@ -1,4 +1,4 @@
-# CS545 - Project 1
+# CS545 - Project 1 - Montreal, Canada
 Details about this project are explained on my website. Please visit my [Portfolio](https://ennoiamai.github.io/Portfolio/web_applications/proj1/details.html).
 
 Follow this [link](https://ennoiamai.github.io/Portfolio/web_applications/proj1/index.html) to view the project.
