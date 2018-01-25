@@ -3,14 +3,12 @@ Details about this project are explained on my website. Please visit my [Portfol
 
 <!-- Follow this [link](http://jadran.sdsu.edu/~jadrn041/proj3/index.html) to view the project. -->
 
-The files on github can be viewed [here](https://github.com/EnnoiaMai/Projects_and_Assignments/tree/master/CS545_Project_4)
-
 Here are previews of what the website looks like. Note that it does not display the full functionality of the website because I currently do not have hosting so the scripts cannot be run.
 
-![CS545_Project4__preview](../images_readme/CS545_Project4_.home.png)
+![CS545_Project4__preview](../images_readme/CS545_Project4_home.png)
 
 
-![CS545_Project4__preview](../images_readme/CS545_Project4_.about.png)
+![CS545_Project4__preview](../images_readme/CS545_Project4_about.png)
 
 
-![CS545_Project4__preview](../images_readme/CS545_Project4_.contact.png)
+![CS545_Project4__preview](../images_readme/CS545_Project4_contact.png)
