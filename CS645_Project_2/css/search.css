@@ -1,0 +1,125 @@
+/*
+* Nguyen, Thuc
+* jadrn025
+* Project #2
+* Spring 2018
+*/
+
+/*================================= GENERAL ==================================*/
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 720px;
+}
+
+/*================================= CONTENT ==================================*/
+#content {
+    flex: 1 0 auto;
+    margin-top: 80px;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+}
+
+/*------------------------------ PRODUCTS GRID -------------------------------*/
+#products_grid {
+    background-color: rgba(220, 220, 220, 0.5);
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 24px 12px;
+    align-items: flex-start;
+    padding: 24px;
+}
+#products_grid .product_box {
+    background-color: rgba(255, 255, 255, 1.0);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+#products_grid .product_image {
+    height: 35vh;
+    min-height: 160px;
+    max-height: 320px;
+}
+#products_grid .product_image img {
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Vendor and Manufacturer ID */
+#products_grid .product_box > p:nth-child(2) {
+    padding: 8px 0px;
+}
+
+/* Description */
+#products_grid .product_box > p:nth-child(3) {
+    color: #666;
+}
+
+/* Status, Quantity, and Price */
+#products_grid .product_status_price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0px;
+}
+#products_grid .product_status_price > div {
+    flex-basis: 50%;
+}
+#products_grid .product_status_price > div > p:nth-child(2) {
+    color: #888;
+}
+#products_grid .product_status_price > p {
+    font-weight: bold;
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Add to cart button */
+#products_grid .product_box > button {
+    color: #DDD;
+    background-color: #46616F;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+#products_grid .product_box > button:hover {
+    color: #FFF;
+    background-color: #1178AE;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+/*========================== CLASSES TO ADD/REMOVE ===========================*/
+.in_stock {
+    color: #34C754;
+}
+.coming_soon {
+    color: #B20000;
+}
+
+/*============================= MEDIA QUERIES ================================*/
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    #products_grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 767px) {
+    #products_grid {
+        grid-template-columns: 1fr;
+    }
+}

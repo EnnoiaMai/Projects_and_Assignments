@@ -1,0 +1,180 @@
+/*
+* Nguyen, Thuc
+* jadrn025
+* Project #2
+* Spring 2018
+*/
+
+/*================================= GENERAL ==================================*/
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/*================================= CONTENT ==================================*/
+#content {
+    background-color: rgba(220, 220, 220, 0.5);
+    flex: 1 0 auto;
+    margin-top: 80px;
+}
+/*-------------------------- CONFIRMATION CONTAINER --------------------------*/
+#confirmation_container {
+    color: #FFF;
+    display: none;
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 16px 24px;
+    margin: 24px auto 0px auto;
+    border-radius: 4px;
+}
+#confirmation_container > div {
+    flex-basis: 6%;
+    min-width: 60px;
+    max-width: 100px;
+}
+#confirmation_container img {
+    width: 100%;
+}
+#confirmation_container p {
+    font-size: 104%;
+    flex-basis: 90%;
+}
+/*---------------------------- PRODUCT CONTAINER -----------------------------*/
+#product_container {
+    background-color: rgba(255, 255, 255, 1.0);
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 24px auto;
+    border-radius: 4px;
+}
+
+/*============================== IMAGE PREVIEW ===============================*/
+#image_preview {
+    flex-basis: 48%;
+    min-width: 240px;
+    max-width: 600px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-right: 1px solid #DDD;
+}
+#image_preview img {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*============================ DETAILS CONTAINER =============================*/
+#details_container {
+    flex-basis: 48%;
+    padding: 16px;
+    margin-top: 16px;
+}
+
+/* Vendor and Manufacturer ID */
+#details_container > p:nth-child(1) {
+    font-weight: bold;
+    font-size: 112%;
+    margin-bottom: 8px;
+}
+
+/* Availability, Quantity, and Retail price */
+#details_container > div:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+#details_container > div:nth-child(2) > div {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+}
+#details_container > div:nth-child(2) > div > p:nth-child(2) {
+    color: #666;
+}
+#details_container > div:nth-child(2) > p {
+    font-weight: bold;
+    font-size: 104%;
+    text-align: center;
+    flex-basis: 50%;
+    align-self: center;
+}
+
+/* Description Label, Features Label */
+#details_container > p:nth-child(3), #details_container > p:nth-child(5) {
+    color: #46616F;
+    font-weight: bold;
+    font-size: 104%;
+}
+
+/* Description, Features */
+#details_container > p:nth-child(4), #details_container > p:nth-child(6) {
+    color: #666;
+    line-height: 160%;
+}
+#details_container > p:nth-child(4) {
+    margin-bottom: 20px;
+}
+#details_container > p:nth-child(6) {
+    margin-bottom: 20px;
+}
+
+/* Quantity label, input, and Add to Cart button */
+#details_container > div:nth-child(7) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#details_container > div:nth-child(7) > div {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+#details_container > div:nth-child(7) > div > label {
+    padding: 10px 0px;
+    margin-right: 8px;
+}
+#details_container > div:nth-child(7) > button {
+    color: #EEE;
+    background-color: #444;
+    flex-basis: 50%;
+    border: none;
+    padding: 10px 24px;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+#details_container > div:nth-child(7) > button:hover {
+    color: #FFF;
+    background-color: #718681;
+    cursor: pointer;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+/*========================== CLASSES TO ADD/REMOVE ===========================*/
+.in_stock {
+    color: #34C754;
+}
+.coming_soon {
+    color: #B20000;
+}
+.confirmation_success {
+    background-color: #1A8B21;
+}
+.confirmation_error {
+    background-color: #C90000;
+}

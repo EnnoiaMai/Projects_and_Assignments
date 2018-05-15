@@ -1,0 +1,126 @@
+/*
+* Nguyen, Thuc
+* jadrn025
+* Project #2
+* Spring 2018
+*/
+
+/*================================= MENU =====================================*/
+#menu {
+    color: #46616F;
+    background-color: rgba(245, 245, 245, 0.96);
+    width: 100%;
+    min-width: 800px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-sizing: border-box;
+    border-bottom: 1px solid #DDD;
+}
+
+/*-------------------------------- MENU ICON ---------------------------------*/
+#menu_icon {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+#menu_icon a {
+    color: #000;
+    text-decoration: none;
+    text-decoration-line: none;
+}
+#menu_icon a:hover {
+    cursor: pointer;
+}
+
+/*-------------------------- CART, LINKS, AND SEARCH -------------------------*/
+#menu > div:nth-child(2) {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 24px;
+}
+#menu > div:nth-child(2) > div:nth-child(2) {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*----------------------------------- CART -----------------------------------*/
+#menu_cart {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-end;
+}
+#menu_cart span {
+    font-weight: bold;
+}
+#menu_cart p {
+    /* color: #888; */
+    color: #1178AE;
+    margin-right: 8px;
+}
+#menu_cart img {
+    width: 24px;
+    height: 24px;
+}
+
+/*----------------------------------- LINKS ----------------------------------*/
+#menu_links {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 36px;
+}
+#menu_links ul {
+    list-style: none;
+    text-align: center;
+}
+#menu_links ul li {
+    display: inline-block;
+}
+#menu_links ul li a {
+    color: #888;
+    font-size: 90%;
+    display: block;
+    text-decoration: none;
+    padding: 4px 24px;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+#menu_links ul li a:hover {
+    color: #000;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+/*---------------------------------- SEARCH ----------------------------------*/
+#menu_search {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+#menu_search img {
+    width: 24px;
+    height: 24px;
+}
+#menu_search input {
+    padding: 4px 8px;
+    border: 1px solid #CCC;
+}

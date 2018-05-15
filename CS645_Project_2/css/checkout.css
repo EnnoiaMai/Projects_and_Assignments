@@ -1,0 +1,196 @@
+/*
+* Nguyen, Thuc
+* jadrn025
+* Project #2
+* Spring 2018
+*/
+
+/*================================= GENERAL ==================================*/
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    height: 100vh;
+}
+input[type='text'] {
+    padding: 8px;
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 2px 0px #c9c9c9 inset;
+}
+label {
+    color: #666;
+}
+
+/*================================= CONTENT ==================================*/
+#content {
+    /* font-size: 90%; */
+    background-color: rgba(220, 220, 220, 0.5);
+    flex: 1 0 auto;
+    margin-top: 80px;
+}
+#content > div {
+    background-color: #FFF;
+    width: 80%;
+    padding: 16px;
+    margin: 0px auto;
+}
+#content h2 {
+    padding: 16px 0px;
+}
+
+/*====================== SECTIONS - CONTENT AND ERROR ========================*/
+.section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.section_phone {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+}
+.section > div:nth-child(2), .section_phone > div:nth-child(2) {
+    flex-basis: 40%;
+    display: flex;
+    align-items: center;
+}
+.section > div:nth-child(2) > p, .section_phone > div:nth-child(2) > p {
+    padding: 0px 16px;
+}
+
+/*===================== ADDRESS - BILLING AND SHIPPING =======================*/
+#billing_address_div, #shipping_address_div {
+    margin-bottom: 16px;
+}
+#billing_address_div h3, #shipping_address_div h3 {
+    color: #46616F;
+    padding: 8px 0px;
+}
+
+/* Checkbox for Billing same as Shipping */
+#shipping_checkbox_div {
+    display: flex;
+    flex-direction: row;
+    padding: 16px 0px;
+}
+#shipping_checkbox_div input {
+    margin-right: 16px;
+}
+
+/*================================= LAYOUT ===================================*/
+.name_div {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.name_div div {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.flex_column {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+}
+.subaddress_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.subaddress_div div {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.phone_number_div {
+    display: flex;
+    flex-direction: column;
+}
+
+/*======================== PAYMENT AND EXPIRATION ============================*/
+/*------------------------------- PAYMENT TYPE -------------------------------*/
+#payment_type_div h3, #credit_card_div h3, #expiration_div h4 {
+    color: #46616F;
+    padding: 8px 0px;
+}
+#payment_type_div {
+    padding: 8px 0px;
+}
+#cards_div {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 1px solid #FFF;
+}
+
+/*--------------------------- CARD NAME AND NUMBER ---------------------------*/
+#credit_card_div {
+
+}
+#credit_card_div .section > div:nth-child(1) {
+    flex-grow: 1;
+}
+
+#credit_card_div .section > div:nth-child(1) > div {
+    display: flex;
+    flex-direction: column;
+}
+
+/*-------------------------------- EXPIRATION --------------------------------*/
+#expiration_div {
+    margin-bottom: 24px;
+}
+#expiration_div .section > div:nth-child(1) {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#expiration_div .section > div:nth-child(1) div {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*------------------------------ CHECKOUT BUTTON -----------------------------*/
+#checkout_div input {
+    color: #DDD;
+    background-color: #46616F;
+    display: block;
+    text-decoration: none;
+    border: none;
+    padding: 14px 64px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+#checkout_div input:hover {
+    color: #FFF;
+    background-color: #1178AE;
+    cursor: pointer;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+/*=============================== ERROR DIVS =================================*/
+#error_bill_names_div, #error_bill_address_div, #error_bill_phone_div, #error_ship_names_div, #error_ship_address_div, #error_ship_phone_div, #error_payment_type_div, #error_card_name_div, #error_card_number_div, #error_expiration_div {
+    color: red;
+    visibility: hidden;
+}

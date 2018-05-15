@@ -1,0 +1,234 @@
+/*
+* Nguyen, Thuc
+* jadrn025
+* Project #2
+* Spring 2018
+*/
+
+/*================================= GENERAL ==================================*/
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/*================================= CONTENT ==================================*/
+#content {
+    width: 100%;
+    background-color: rgba(220, 220, 220, 0.5);
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 80px auto 0px auto;
+}
+#content > div:nth-child(1) {
+    background-color: #FFF;
+    flex: 0 1 70%;
+    min-width: 320px;
+    padding: 16px;
+    margin-left: 24px;
+}
+#content > div:nth-child(1) h2 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+/*====================== TABLE AND ORDER SUMMARY =============================*/
+#order_table_div {
+}
+#order_summary {
+    background-color: #FFF;
+    flex: 0 0 25%;
+    padding: 24px;
+    border-left: 1px solid rgba(220, 220, 220, 0.5);
+}
+
+/*================================= TABLE ====================================*/
+#order_table_div table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 1px solid #AAA;
+}
+#order_table_div td {
+    border-bottom: 1px solid #DDD;
+}
+
+/*----------------------------- The Product ----------------------------------*/
+#order_table_div td:nth-child(1) {
+    width: 30%;
+}
+/*----------------------------- Product Image---------------------------------*/
+#order_table_div td img {
+    width: 100%;
+    max-width: 400px;
+}
+/*------------------------------ Description ---------------------------------*/
+#order_table_div td:nth-child(2) {
+    color: #666;
+    width: 40%;
+    vertical-align: top;
+    padding: 14px 6px;
+}
+#order_table_div td:nth-child(2) > p {
+    color: #46616F;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+/*------------------------------- Quantity -----------------------------------*/
+#order_table_div td:nth-child(3) {
+    color: #46616F;
+    width: 20%;
+    text-align: center;
+    vertical-align: top;
+}
+/*--------------------------------- Price ------------------------------------*/
+#order_table_div td:nth-child(4) {
+    font-weight: bold;
+    width: 10%;
+    text-align: center;
+    vertical-align: top;
+    padding-top: 14px;
+}
+
+/*======================== TABLE QUANTITY CONTAINER ==========================*/
+.quantity_flex_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 12px;
+}
+.quantity_flex_row > label {
+    font-weight: bold;
+    width: 30%;
+}
+.quantity_flex_row > input[type="text"] {
+    text-align: center;
+    font-size: 96%;
+    width: 30%;
+}
+.quantity_flex_row > input[type="button"] {
+    flex-basis: 50%;
+}
+
+/*============================== TABLE BUTTONS ===============================*/
+#order_table_div .quantity_flex_row > input[type='button'] {
+    color: #000;
+    background-color: #FFF;
+    text-decoration-line: underline;
+    border: none;
+    padding: 6px 8px;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+#order_table_div .quantity_flex_row > input[type='button']:hover {
+    color: #01ACC5;
+    cursor: pointer;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+#order_table_div .quantity_flex_row > input[type='button']:nth-child(2):hover {
+    color: #C90000;
+}
+
+/*============================= ORDER SUMMARY ================================*/
+#order_summary h2 {
+    text-align: center;
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+#order_summary table {
+    font-size: 90%;
+    width: 100%;
+    padding: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+    border-top: 1px solid #333;
+}
+#order_summary td {
+    padding: 4px 16px;
+}
+#order_summary td:first-child {
+    width: 50%;
+}
+#order_summary td:nth-child(2) {
+    text-align: right;
+}
+#order_summary tr:nth-child(2) td:first-child p {
+    color: #C49966;
+}
+#order_summary tr:nth-child(4) td {
+    font-size: 108%;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #555;
+}
+#order_summary button {
+    color: #DDD;
+    background-color: #46616F;
+    /* text-align: center;
+    display: block; */
+    width: 100%;
+    /* text-decoration: none; */
+    border: none;
+    padding: 12px 48px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+#order_summary button:hover {
+    color: #FFF;
+    background-color: #1178AE;
+    cursor: pointer;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+/*-------------------------- CONFIRMATION CONTAINER --------------------------*/
+#confirmation_container {
+    flex: 0 0 auto;
+    color: #FFF;
+    display: none;
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 16px 24px;
+    margin: 100px auto 0px auto;
+    border-radius: 4px;
+}
+#confirmation_container > div {
+    flex-basis: 6%;
+    min-width: 60px;
+    max-width: 100px;
+}
+#confirmation_container img {
+    width: 100%;
+}
+#confirmation_container p {
+    font-size: 104%;
+    flex-basis: 90%;
+}
+
+.confirmation_success {
+    background-color: #1A8B21;
+}
+.confirmation_error {
+    background-color: #C90000;
+}

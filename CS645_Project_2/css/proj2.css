@@ -1,0 +1,359 @@
+/*
+* Nguyen, Thuc
+* jadrn025
+* Project #2
+* Spring 2018
+*/
+
+/*
+* Image slider code based off of https://www.w3schools.com/howto/howto_js_slideshow.asp
+* but was modified.
+*/
+
+/*================================= GENERAL ==================================*/
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    min-width: 800px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/*================================= CONTENT ==================================*/
+#content {
+    flex: 1 0 auto;
+    margin-top: 80px;
+}
+
+/*============================== HEADER SLIDER ===============================*/
+/* Slideshow container */
+#image_slider {
+    width: 100%;
+    height: 80vh;
+    min-height: 240px;
+    max-height: 720px;
+    overflow: hidden;
+    position: relative;
+    /* border: 1px dashed orange; */
+}
+
+/* Hide the images by default */
+.single_slide {
+    display: none;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+.single_slide img {
+    width: 100%;
+}
+
+/* Next & previous buttons */
+.slider_previous, .slider_next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.slider_next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.slider_previous:hover, .slider_next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    text-align: center;
+    width: 40%;
+    position: absolute;
+    padding: 8px 12px;
+}
+.text h2 {
+    font-size: 200%;
+    padding: 16px;
+}
+.text p {
+    font-size: 140%;
+}
+.slider_text_1 {
+    left: 10%;
+    top: 40%;
+}
+.slider_text_2 {
+    top: 40%;
+    right: 10%;
+}
+.slider_text_3 {
+    color: #000;
+    top: 30%;
+    left: 10%;
+}
+
+/* The dots/bullets/indicators */
+.slider_click {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .slider_click:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+/* .fade { */
+    /* -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s; */
+/* } */
+
+/* @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+} */
+
+/*============================ TRENDING PRODUCTS =============================*/
+#trending_products {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 16px;
+}
+#trending_products > div:first-child {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: row;
+}
+#trending_preview {
+    flex-basis: 80%;
+    height: 70vh;
+    min-height: 160px;
+    max-height: 480px;
+    border-right: 1px solid #DDD;
+}
+#trending_preview img {
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#trending_preview img:hover {
+    cursor: pointer;
+}
+#trending_column {
+    flex-grow: 1;
+    flex-basis: 10%;
+    display: flex;
+    flex-direction: column;
+}
+#trending_column > div {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: auto;
+    height: 6vh;
+    min-height: 100px;
+    max-height: 480px;
+    cursor: pointer;
+}
+.trending_dim {
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.trending_dim:hover {
+    background-color: rgba(40, 40, 40, 0.7);
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+#trending_details {
+    background-color: rgba(240, 240, 240, 0.6);
+    flex-basis: 40%;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+#trending_details > p:first-child {
+    color: #46616F;
+    text-align: center;
+    text-decoration-color: rgba(240, 240, 240, 0.6);
+    text-decoration-line: underline;
+    font-size: 200%;
+    padding: 24px 16px;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+#trending_details > p:first-child:hover {
+    color: #2897D0;
+    text-decoration: underline;
+    text-decoration-color: #2897D0;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+#trending_details > p:nth-child(2) {
+    color: #666;
+    font-size: 110%;
+    line-height: 150%;
+}
+
+/*============================= FEATURED BRANDS ==============================*/
+/*---------------------------------- Title -----------------------------------*/
+.section_title {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 24px;
+}
+.section_title h2 {
+    background-color: #FFF;
+    text-align: center;
+    width: 35%;
+    transform: translateY(50%);
+    padding: 12px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 5;
+}
+.section_title hr {
+    border-color: rgba(220, 220, 220, 0.5);
+}
+
+/*----------------------------- Brands Container -----------------------------*/
+#featured_brands {
+    padding: 24px;
+}
+#featured_brands > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#featured_brands > div > div:nth-child(1) {
+    margin-bottom: 24px;
+}
+#featured_brands .brand_detail_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#featured_brands .brand_detail_box > div {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: auto;
+    min-width: 240px;
+    height: 50vh;
+    min-height: 240px;
+    max-height: 720px;
+    flex-basis: 30%;
+}
+.details_dim {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.details_dim:hover {
+    background-color: rgba(40, 40, 40, 0.7);
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+.details_dim p:nth-child(1) {
+    color: #CCC;
+    font-size: 36px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    transition: flex-basis 3s;
+}
+.details_dim:hover p:nth-child(1) {
+    flex-basis: 20%;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+.details_dim p:nth-child(2) {
+    color: #BBB;
+    font-size: 120%;
+    text-align: center;
+    display: none;
+    flex-basis: 0%;
+    opacity: 0.0;
+    padding: 12px;
+    transition: flex-basis 3s;
+}
+.details_dim:hover p:nth-child(2) {
+    color: #BBB;
+    opacity: 0.9;
+    display: block;
+    flex-basis: 30%;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+/*============================= MEDIA QUERIES ================================*/
+@media screen and (max-width: 992px) {
+    #trending_products {
+        flex-direction: column;
+    }
+    #featured_brands .brand_detail_box {
+        flex-direction: column;
+    }
+    #featured_brands > div > div:nth-child(1) {
+        margin-bottom: 0px;
+    }
+
+    .text h2 {
+        font-size: 120%;
+    }
+    .text p {
+        font-size: 100%;
+    }
+}
