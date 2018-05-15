@@ -9,13 +9,13 @@ Details about this project are explained on my website. Please visit my [Portfol
 Here is a preview of what the website looks like.
 
 ## Login Page
-![CS645 Project 1 Login]()
+![CS645 Project 1 Login](../images_readme/CS645_Project1_signin.png)
 
 
 
 
 ## Inventory Page (Adding a new product)
-![CS645 Project 1 Add new product]()
+![CS645 Project 1 Add new product](../images_readme/CS645_Project1_validation.gif)
 
 
 
