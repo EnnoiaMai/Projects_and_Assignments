@@ -20,8 +20,12 @@ Here is a preview of what the website looks like.
 
 
 
+
+
 ## Browse Page
 ![CS645 Project 2 Browse Preview](../images_readme/CS645_Project2_browse_preview.png)
+
+
 
 
 
@@ -32,8 +36,12 @@ Here is a preview of what the website looks like.
 
 
 
+
+
 ## Featured Brands Page
 ![CS645 Project 2 Featured Brands PReview](../images_readme/CS645_Project2_featured_brands_preview.png)
+
+
 
 
 
@@ -44,8 +52,12 @@ Here is a preview of what the website looks like.
 
 
 
+
+
 ## Checkout Page (Payment)
 ![CS645 Project 2 Checkout Preview](../images_readme/CS645_Project2_payment_preview.png)
+
+
 
 
 
@@ -56,14 +68,20 @@ Here is a preview of what the website looks like.
 
 
 
+
+
 ## Contact Page
 ![CS645 Project 2 Contact Preview](../images_readme/CS645_Project2_contact_preview.png)
 
 
 
 
+
+
 ## Search Page
 ![CS645 Project 2 Search Preview](../images_readme/CS645_Project2_search_preview.png)
+
+
 
 
 
