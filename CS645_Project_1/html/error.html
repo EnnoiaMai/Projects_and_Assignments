@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+Thuc Nguyen
+jadrn025
+Project #1
+Spring 2018
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PackBack Sign In</title>
+        <link rel="stylesheet" href="../css/signin.css">
+    </head>
+    <body>
+        <div id="background_container">
+            <div id="login_container">
+                <h2>Sign In</h2>
+                <form action="/perl/jadrn025/signin.cgi" method="post">
+                    <div class="flex_column_container">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" value="" autofocus>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" value="">
+                    </div>
+
+                    <div id="login_error">
+                        <p>The username or password was invalid.</p>
+                    </div>
+
+                    <div class="button_containers">
+                        <input type="reset" id="clear_button" value="Clear">
+                        <input type="submit" id="signin_button" value="Sign In">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
