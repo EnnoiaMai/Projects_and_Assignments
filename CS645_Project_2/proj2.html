@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<!--
+Nguyen, Thuc
+jadrn025
+Project #2
+Spring 2018
+-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>PackBack</title>
+
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="css/proj2.css">
+        <link rel="stylesheet" href="css/footer.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/jadrn025/js/shopping_cart.js"></script>
+        <script type="text/javascript" src="js/menu_search.js"></script>
+        <script type="text/javascript" src="js/proj2.js"></script>
+    </head>
+    <body>
+        <!-- MENU -->
+        <div id="menu">
+            <div id="menu_icon">
+                <h2><a href="proj2.html">PackBack</a></h2>
+            </div>
+            <div>
+                <div id="menu_cart">
+                    <p><span id="cart_quantity"></span> Items</p>
+                    <a href="jsp_files/order.jsp"><img src="/jadrn025/packback_images/icon_cart.png" alt="Cart"></a>
+                </div>
+                <div>
+                    <div id="menu_links">
+                        <ul>
+                            <li><a href="jsp_files/browse.jsp">Browse</a></li>
+                            <li><a href="jsp_files/brands.jsp">Featured Brands</a></li>
+                            <li><a href="jsp_files/order.jsp">Order</a></li>
+                            <li><a href="jsp_files/contact.jsp">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div id="menu_search">
+                        <img src="/jadrn025/packback_images/icon_search.png" alt="">
+                        <input type="text" name="" value="" placeholder="Search" id="searchbar">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="content">
+            <!-- Header Image Slider -->
+            <div id="header_slider">
+                <!-- Slideshow container -->
+                <div id="image_slider">
+
+                    <!-- Full-width images with number and caption text -->
+                    <div class="single_slide">
+                        <img src="/jadrn025/packback_images/image_slide_1.jpg">
+                        <div class="text slider_text_1"></div>
+                    </div>
+
+                    <div class="single_slide">
+                        <img src="/jadrn025/packback_images/image_slide_2.jpg">
+                        <div class="text slider_text_2"></div>
+                    </div>
+
+                    <div class="single_slide">
+                        <img src="/jadrn025/packback_images/image_slide_3.jpg">
+                        <div class="text slider_text_3"></div>
+                    </div>
+
+                    <!-- Next and previous buttons -->
+                    <a class="slider_previous">&#10094;</a>
+                    <a class="slider_next">&#10095;</a>
+                </div>
+                <br>
+
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="slider_click"></span>
+                    <span class="slider_click"></span>
+                    <span class="slider_click"></span>
+                </div>
+            </div>
+
+            <div class="section_title">
+                <h2>Trending Products</h2>
+                <hr>
+            </div>
+            <!-- Trending Products -->
+            <div id="trending_products">
+                <div>
+                    <div id="trending_preview">
+                        <img src="" alt="">
+                    </div>
+                    <div id="trending_column">
+                        <div class="trending_column_element">
+                            <div class="trending_dim">
+                            </div>
+                        </div>
+                        <div class="trending_column_element">
+                            <div class="trending_dim">
+                            </div>
+                        </div>
+                        <div class="trending_column_element">
+                            <div class="trending_dim">
+                            </div>
+                        </div>
+                        <div class="trending_column_element">
+                            <div class="trending_dim">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="trending_details">
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+
+            <!-- Featured Brands -->
+            <div class="section_title">
+                <h2>Featured Brands</h2>
+                <hr>
+            </div>
+            <div id="featured_brands">
+                <div>
+                    <div class="brand_detail_box">
+                        <div>
+                            <div class="details_dim">
+                                <p></p>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="details_dim">
+                                <p></p>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="details_dim">
+                                <p></p>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="brand_detail_box">
+                        <div>
+                            <div class="details_dim">
+                                <p></p>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="details_dim">
+                                <p></p>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div id="footer">
+            <div id="footer_flex_container">
+                <div id="links_container">
+                    <ul>
+                        <li><a href="jsp_files/contact.jsp">Customer Service</a></li>
+                        <li><a href="jsp_files/order.jsp">Cart</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p>Copyright &copy; 2018 PackBack Inc. All Rights Reserved.</p>
+        </div>
+    </body>
+</html>
