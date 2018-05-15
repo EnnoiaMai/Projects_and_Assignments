@@ -1,20 +1,30 @@
 # CS545 - Project 3 - Marathon (Server-side)
-Details about this project are explained on my website. Please visit my [Portfolio](https://ennoiamai.github.io/Portfolio/web_applications/proj2_3/details3.html)
+Details about this project are explained on my website. Please visit my [Portfolio](https://ennoiamai.github.io/Portfolio/web_applications/CS545/project3_details.html)
 
 <!-- Follow this [link](http://jadran.sdsu.edu/~jadrn041/proj3/index.html) to view the project. -->
 
-Here are previews of what the website looks like.
+Here is a preview of what the website looks like.
 
+## Validation on Server
 Validation that occurs in PHP on the server, in the case that JS is disabled.
 
- ![CS545_Project2_3_php_validation_preview](../images_readme/CS545_Project2_3_php_validation_preview.gif)
+![CS545_Project2_3_php_validation_preview](../images_readme/CS545_Project2_3_php_validation_preview.gif)
 
 
+
+
+## Duplicate Error
 If there was an error in uploading the runner's image, this page would be outputted.
 
- ![CS545_Project2_3_duplicate_preview](../images_readme/CS545_Project2_3_duplicate_preview.png)
+![CS545_Project2_3_duplicate_preview](../images_readme/CS545_Project2_3_duplicate_preview.png)
 
 
- Preview of how logging in successfully will generate the Roster Report.
+
+
+## Roster Report 
+Preview of how logging in successfully will generate the Roster Report.
 
 ![CS545_Project2_3_report_preview](../images_readme/CS545_Project2_3_report_preview.gif)
+
+
+
