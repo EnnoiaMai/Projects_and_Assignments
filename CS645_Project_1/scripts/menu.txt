@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<!--
+Thuc Nguyen
+jadrn025
+Project #1
+Spring 2018
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PackBack Menu</title>
+
+        <link rel="stylesheet" href="/~jadrn025/proj1/css/menu.css">
+        <link rel="stylesheet" href="/~jadrn025/proj1/jquery-ui-1.12.1/jquery-ui.min.css">
+
+        <script type="text/javascript" src="http://jadran.sdsu.edu/jquery/jquery.js"></script>
+        <script type="text/javascript" src="/~jadrn025/proj1/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+        <script type="text/javascript" src="/~jadrn025/proj1/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/~jadrn025/proj1/js/menu.js"></script>
+    </head>
+
+    <body>
+        <h1>PackBack</h1>
+        <input type="hidden" id="refresh" value="no">
+        <div id="logout_div">
+            <a>Logout</a>
+        </div>
+        <div id="tabs">
+            <ul>
+                <li><a href="#new_inventory_tab">New</a></li>
+                <li><a href="#edit_inventory_tab">Edit</a></li>
+                <li><a href="#delete_inventory_tab">Delete</a></li>
+            </ul>
+
+            <!-- NEW INVENTORY TAB -->
+            <div id="new_inventory_tab">
+                <h2>New Inventory Record</h2>
+
+                <!-- Confirmation after new submission -->
+                <div id="new_inventory_confirmation">
+                    <div>
+                        <img src="" alt="Status: ">
+                    </div>
+                    <p>The new record has been successfully added.</p>
+                </div>
+
+                <form name="newProductForm" method="post" enctype="multipart/form-data">
+
+                    <div class="flex_row">
+                        <!-- SKU AND MANUFACTURER'S ID -->
+                        <div class="flex_column">
+                            <div class="field_container">
+                                <label for="new_sku">SKU</label>
+                                <input type="text" name="sku" value="" id="new_sku" maxlength="7" placeholder="xxx-xxx">
+                            </div>
+                            <div id="error_new_sku_div">
+                                <p>Enter the 6-character SKU separated by a dash.</p>
+                            </div>
+                            <div class="field_container">
+                                <label for="new_manufacturer_ID">Manfacturer's Identifier</label>
+                                <input type="text" name="manufacturerID" value="" id="new_manufacturer_ID">
+                            </div>
+                            <div id="error_new_manufacturer_div">
+                                <p>Enter a valid Manufacturer's ID.</p>
+                            </div>
+                        </div>
+
+                        <!-- CATEGORY AND VENDOR -->
+                        <div class="flex_column">
+                            <div class="field_container">
+                                <label for="new_category">Category</label>
+                                <div>
+                                    <select id="new_category" name="category">
+                                        <option value="null" selected>-----</option>
+                                        <option value="1">Classics</option>
+                                        <option value="2">Laptop</option>
+                                        <option value="3">Rolling</option>
+                                        <option value="4">Travel</option>
+                                        <option value="5">Hiking</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="error_new_category_div">
+                                <p>Enter the category for this product.</p>
+                            </div>
+                            <div class="field_container">
+                                <label for="new_vendor">Vendor</label>
+                                <div>
+                                    <select id="new_vendor" name="vendor">
+                                        <option value="null" selected>-----</option>
+                                        <option value="1">Jansport</option>
+                                        <option value="2">Herschel</option>
+                                        <option value="3">The North Face</option>
+                                        <option value="4">High Sierra</option>
+                                        <option value="5">Adidas</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="error_new_vendor_div">
+                                <p>Enter the vendor of this product.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DESCRIPTION -->
+                    <div class="flex_row_description">
+                        <label for="new_description">Description</label>
+                        <textarea name="description" rows="8" cols="80" id="new_description" maxlength="500" placeholder="Short description of the item..."></textarea>
+                    </div>
+                    <div id="error_new_description_div">
+                        <p>Enter a short description for the product.</p>
+                    </div>
+
+                    <!-- FEATURES -->
+                    <div class="flex_row_description">
+                        <label for="new_features">Features</label>
+                        <textarea name="features" rows="8" cols="80" id="new_features" maxlength="1000" placeholder="Detailed description of the item..."></textarea>
+                    </div>
+                    <div id="error_new_features_div">
+                        <p>Enter a detailed description of the product.</p>
+                    </div>
+
+                    <!-- COST, RETAIL, AND QUANTITY -->
+                    <div class="flex_row">
+                        <div>
+                            <div class="field_container">
+                                <label for="new_cost">Cost</label>
+                                <input type="text" name="cost" value="" id="new_cost">
+                            </div>
+                            <div id="error_new_cost_div">
+                                <p>Enter the cost.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="field_container">
+                                <label for="new_retail">Retail</label>
+                                <input type="text" name="retail" value="" id="new_retail">
+                            </div>
+                            <div id="error_new_retail_div">
+                                <p>Enter the retail price.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="field_container">
+                                <label for="new_quantity">Quantity</label>
+                                <input type="text" name="quantity" value="" id="new_quantity">
+                            </div>
+                            <div id="error_new_quantity_div">
+                                <p>Enter the quantity.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- IMAGE AND PREVIEW IMAGE -->
+                    <div class="flex_row">
+                        <div>
+                            <div class="field_container">
+                                <label for="new_product_image">Product Image</label>
+                                <input type="file" name="productImage" value="" id="new_product_image" accept="image/*">
+                            </div>
+                            <div id="error_new_image_div">
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="image_preview_container">
+                            <img src="" alt="" id="new_image_preview">
+                        </div>
+                    </div>
+
+                    <!-- RESET AND SUBMIT BUTTONS -->
+                    <div class="button_containers">
+                        <input type="reset" name="newResetButton" value="Clear" id="new_reset_button" class="enable_buttons_reset">
+                        <button type="button" name="newSubmitButton" class="enable_buttons_submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- EDIT INVENTORY TAB -->
+            <div id="edit_inventory_tab">
+                <h2>Edit Inventory Record</h2>
+
+                <!-- Confirmation after edit submission -->
+                <div id="edit_inventory_confirmation">
+                    <div>
+                        <img src="" alt="Status: ">
+                    </div>
+                    <p>The existing record has been successfully edited.</p>
+                </div>
+
+                <div id="edit_inventory_content">
+                    <form name="editProductForm" method="post" enctype="multipart/form-data">
+
+                        <div class="sku_container">
+                            <label for="edit_enter_sku">Enter the SKU</label>
+                            <input type="text" name="sku" value="" id="edit_enter_sku" maxlength="7" placeholder="xxx-xxx">
+                        </div>
+                        <div id="error_edit_sku_div">
+                            <p>Enter the 6-character SKU separated by a dash.</p>
+                        </div>
+
+                        <div class="flex_row">
+                            <div>
+                                <div class="field_container">
+                                    <label for="edit_manufacturer_ID">Manfacturer's Identifier</label>
+                                    <input type="text" name="manufacturerID" value="" id="edit_manufacturer_ID">
+                                </div>
+                                <div id="error_edit_manufacturer_div">
+                                    <p>Enter a valid Manufacturer's ID.</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="field_container">
+                                    <label for="edit_category">Category</label>
+                                    <div>
+                                        <select id="edit_category" name="category">
+                                            <option value="null" selected>-----</option>
+                                            <option value="1">Classics</option>
+                                            <option value="2">Laptop</option>
+                                            <option value="3">Rolling</option>
+                                            <option value="4">Travel</option>
+                                            <option value="5">Hiking</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="error_edit_category_div">
+                                    <p>Enter the category for this product.</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="field_container">
+                                    <label for="edit_vendor">Vendor</label>
+                                    <div>
+                                        <select id="edit_vendor" name="vendor">
+                                            <option value="null" selected>-----</option>
+                                            <option value="1">Jansport</option>
+                                            <option value="2">Herschel</option>
+                                            <option value="3">The North Face</option>
+                                            <option value="4">High Sierra</option>
+                                            <option value="5">Adidas</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="error_edit_vendor_div">
+                                    <p>Enter the vendor of this product.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex_row_description">
+                            <label for="edit_description">Description</label>
+                            <textarea name="description" rows="8" cols="80" id="edit_description" maxlength="500"></textarea>
+                        </div>
+                        <div id="error_edit_description_div">
+                            <p>Enter a short description for the product.</p>
+                        </div>
+
+                        <div class="flex_row_description">
+                            <label for="edit_features">Features</label>
+                            <textarea name="features" rows="8" cols="80" id="edit_features" maxlength="1000"></textarea>
+                        </div>
+                        <div id="error_edit_features_div">
+                            <p>Enter a detailed description of the product.</p>
+                        </div>
+
+                        <div class="flex_row">
+                            <div>
+                                <div class="field_container">
+                                    <label for="edit_cost">Cost</label>
+                                    <input type="text" name="cost" value="" id="edit_cost">
+                                </div>
+                                <div id="error_edit_cost_div">
+                                    <p>Enter the cost.</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="field_container">
+                                    <label for="edit_retail">Retail</label>
+                                    <input type="text" name="retail" value="" id="edit_retail">
+                                </div>
+                                <div id="error_edit_retail_div">
+                                    <p>Enter the retail price.</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="field_container">
+                                    <label for="edit_quantity">Quantity</label>
+                                    <input type="text" name="quantity" value="" id="edit_quantity">
+                                </div>
+                                <div id="error_edit_quantity_div">
+                                    <p>Enter the quantity.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex_row">
+                            <div>
+                                <div class="field_container">
+                                    <label for="edit_product_image">Product Image</label>
+                                    <input type="file" name="productImage" value="" id="edit_product_image" accept="image/*">
+                                </div>
+                                <div id="error_edit_image_div">
+                                    <p>Select an image for the product.</p>
+                                </div>
+                            </div>
+                            <div class="image_preview_container">
+                                <img src="" alt="" id="edit_image_preview">
+                            </div>
+                        </div>
+
+                        <div class="button_containers">
+                            <button type="button" name="editSubmitButton">Save Changes</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <!-- DELETE INVENTORY TAB -->
+            <div id="delete_inventory_tab">
+                <h2>Delete Inventory Record</h2>
+
+                <!-- Confirmation after delete submission -->
+                <div id="delete_inventory_confirmation">
+                    <div>
+                        <img src="" alt="Status: ">
+                    </div>
+                    <p>The existing record has been successfully deleted.</p>
+                </div>
+
+                <div id="delete_inventory_content">
+                    <form name="deleteProductForm" method="post">
+
+                        <div class="sku_container">
+                            <label for="delete_enter_sku">Enter the SKU</label>
+                            <input type="text" name="sku" value="" id="delete_enter_sku" maxlength="7" placeholder="xxx-xxx">
+                        </div>
+                        <div id="error_delete_sku_div">
+                            <p>Enter the 6-character SKU separated by a dash.</p>
+                        </div>
+
+                        <div class="flex_row">
+                            <div class="field_container">
+                                <h4>Manufaturer's Identifier</h4>
+                                <p id="delete_manufacturer_ID">AD34</p>
+                            </div>
+
+                            <div class="field_container">
+                                <h4>Category</h4>
+                                <p id="delete_category">Classics</p>
+                            </div>
+
+                            <div class="field_container">
+                                <h4>Vendor</h4>
+                                <p id="delete_vendor">Adidas</p>
+                            </div>
+                        </div>
+
+                        <div class="flex_row_description">
+                            <h4>Description</h4>
+                            <p id="delete_description">A cool product.</p>
+                        </div>
+
+                        <div class="flex_row_description">
+                            <h4>Features</h4>
+                            <p id="delete_features">Cool features</p>
+                        </div>
+
+                        <div class="flex_row">
+                            <div class="field_container">
+                                <h4>Cost</h4>
+                                <p id="delete_cost">12.24</p>
+                            </div>
+
+                            <div class="field_container">
+                                <h4>Retail</h4>
+                                <p id="delete_retail">12.24</p>
+                            </div>
+
+                            <div class="field_container">
+                                <h4>Quantity</h4>
+                                <p id="delete_quantity">24</p>
+                            </div>
+                        </div>
+
+                        <div id="delete_image_container">
+                            <h4>Product Image</h4>
+                            <div>
+                                <img src="" alt="" id="delete_image_preview">
+                            </div>
+                        </div>
+
+                        <div class="button_containers">
+                            <button type="button" name="deleteSubmitButton">Delete</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="busywait_container">
+            <img src="/~jadrn025/proj1/images/busywait.gif" alt="Processing...">
+        </div>
+    </body>
+</html>
