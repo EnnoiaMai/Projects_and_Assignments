@@ -10,7 +10,7 @@
                     project 2 was a continuation of project 1 except that it dealt with the client side, the website used to
                     purchase the products, and essentially the UI.
 
-Details about this project are explained on my website. Please visit my [Portfolio]().
+Details about this project are explained on my website. Please visit my [Portfolio](https://ennoiamai.github.io/Portfolio/web_applications/CS645/project2_details.html).
 
 Here is a preview of what the website looks like.
 
