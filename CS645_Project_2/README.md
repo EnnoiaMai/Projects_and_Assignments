@@ -14,39 +14,57 @@ Details about this project are explained on my website. Please visit my [Portfol
 
 Here is a preview of what the website looks like.
 
-Home Page
+## Home Page
 ![CS645 Project 2 Home Preview](../images_readme/CS645_Project2_home_preview.png)
 
 
-Browse Page
+
+
+## Browse Page
 ![CS645 Project 2 Browse Preview](../images_readme/CS645_Project2_browse_preview.png)
 
 
-Product Details Page
+
+
+## Product Details Page
 ![CS645 Project 2 Product Details Preview](../images_readme/CS645_Project2_details_preview.png)
 
 
-Featured Brands Page
+
+
+## Featured Brands Page
 ![CS645 Project 2 Featured Brands PReview](../images_readme/CS645_Project2_featured_brands_preview.png)
 
 
-Order Page
+
+
+## Order Page
 ![CS645 Project 2 Order Preview](../images_readme/CS645_Project2_order_preview.png)
 
 
-Checkout Page (Payment)
+
+
+## Checkout Page (Payment)
 ![CS645 Project 2 Checkout Preview](../images_readme/CS645_Project2_payment_preview.png)
 
 
-Order Confirmation Page (Place Order)
+
+
+## Order Confirmation Page (Place Order)
 ![CS645 Project 2 Order Confirmation Preview](../images_readme/CS645_Project2_place_order_preview.png)
 
 
-Contact Page
+
+
+## Contact Page
 ![CS645 Project 2 Contact Preview](../images_readme/CS645_Project2_contact_preview.png)
 
 
-Search Page
+
+
+## Search Page
 ![CS645 Project 2 Search Preview](../images_readme/CS645_Project2_search_preview.png)
+
+
 
 
