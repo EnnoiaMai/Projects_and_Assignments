@@ -7,16 +7,19 @@ Details about this project are explained on my website. Please visit my [Portfol
 
 Here is a preview of what the website looks like. 
 
+## Home Page
 ![CS545_Project4__preview](../images_readme/CS545_Project4_home.png)
 
 
 
 
+## About Page
 ![CS545_Project4__preview](../images_readme/CS545_Project4_about.png)
 
 
 
 
+## Contact Page
 ![CS545_Project4__preview](../images_readme/CS545_Project4_contact.png)
 
 
