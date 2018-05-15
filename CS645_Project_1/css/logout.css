@@ -1,0 +1,38 @@
+/*
+Thuc Nguyen
+jadrn025
+Project #1
+Spring 2018
+*/
+
+/*============================== GENERAL =====================================*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body, html {
+    min-width: 720px;
+    height: 100%;
+}
+
+#background_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-image: url("../images/background2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#background_container > div {
+    width: 600px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(220, 220, 220, 0.9);
+    padding: 32px 0px 32px 0px;
+}

@@ -1,0 +1,122 @@
+/*
+Thuc Nguyen
+jadrn025
+Project #1
+Spring 2018
+*/
+
+/*============================== GENERAL =====================================*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body, html {
+    min-width: 720px;
+    height: 100%;
+}
+
+#background_container {
+    height: 100%;
+    background-image: url("../images/background1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/*============================== LOGIN =======================================*/
+#login_container {
+    min-width: 400px;
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    transform: translate(-50%; -50%);
+    width: 35%;
+    background-color: rgba(56, 56, 56, 0.9);
+    padding: 32px 0px 32px 0px;
+}
+#login_container h2 {
+    color: #bbc7cc;
+    text-align: center;
+}
+#login_container p {
+    color: red;
+    text-align: center;
+    font-size: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+#login_error p {
+    color: red;
+}
+.flex_column_container {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+.flex_column_container label {
+    color: #d6c1a7;
+    padding: 8px 0px;
+}
+.flex_column_container label:nth-child(3) {
+    margin-top: 12px;
+}
+
+.flex_column_container input:valid {
+    background-color: #DDD;
+    display: block;
+    padding: 10px;
+    border: 1px solid #DDD;
+    box-shadow: 0px 0px 2px 0px  #c9c9c9 inset;
+}
+.flex_column_container input:invalid {
+    border-color: red;
+}
+
+.button_containers {
+    width: 60%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 16px;;
+    margin-left: auto;
+    margin-right: auto;
+}
+.button_containers input[type="reset"] {
+    background-color: #577580;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.button_containers input[type="reset"]:hover {
+    background-color: rgba(155, 44, 12, 1);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.button_containers input[type="submit"] {
+    background-color: #577580;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.button_containers input[type="submit"]:hover {
+    background-color: #21AE2A;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
