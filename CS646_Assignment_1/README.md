@@ -10,5 +10,5 @@ Here is a preview of what the app looks like.
 
 
 
-## Input that are out of range
+## Inputs that are out of range
 ![CS646 Assignment 3 Out of Range](../images_readme/CS646_Assignment3_out_of_range.gif)
