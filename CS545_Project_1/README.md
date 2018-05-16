@@ -5,7 +5,14 @@ Follow this [link](https://ennoiamai.github.io/Portfolio/web_applications/CS545/
 
 Here is a preview of what the website looks like.
 
+## Home Page
 ![CS545_Project1_home](../images_readme/CS545_Project1_home.png)
 
 
+
+
+## Must See Sites
 ![CS545_Project1_must_see_sites](../images_readme/CS545_Project1_must_see_sites.png)
+
+
+
