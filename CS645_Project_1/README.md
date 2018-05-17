@@ -4,7 +4,7 @@
           a connection will not be made to the database. Also, the insert statements and file for creating the tables in the
           database are also left out.
 
-Details about this project are explained on my website. Please visit my [Portfolio](https://ennoiamai.github.io/Portfolio/web_applications/CS645/project1_details.html).
+Details about this project are explained on my website. Please visit my [Portfolio](https://thucnguyen95.github.io/Portfolio/web_applications/CS645/project1_details.html).
 
 Here is a preview of what the website looks like.
 
@@ -16,6 +16,3 @@ Here is a preview of what the website looks like.
 
 ## Inventory Page (Adding a new product)
 ![CS645 Project 1 Add new product](../images_readme/CS645_Project1_validation.gif)
-
-
-
