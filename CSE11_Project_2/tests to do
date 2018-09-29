@@ -1,0 +1,17 @@
+show
+create n
+append n
+capacity
+get n
+count-arrays (checks nArrays)
+set n d
+array (checks getArray)
+delete n
+insert n d
+reverse-from n n 
+reverse
+swap n n
+min
+max
+size
+
