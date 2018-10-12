@@ -8,3 +8,5 @@ Repository containing all the resources, including created files and images, for
 **CS646** - iPad/iPhone Mobile Application Development
 
 **CS646.01** - Android Mobile Application Development
+
+**CSE11** - Introduction to Computer Science and Object-Oriented Programming: Java
